@@ -1,2 +1,2 @@
 # emobet-generator
-Emoji + Alphabet = Emobet! Sprinkles som emoji onto a normal alphabet.
+Emoji + Alphabet = Emobet! Sprinkles some emoji onto a normal alphabet.
