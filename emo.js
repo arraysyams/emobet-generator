@@ -11,7 +11,7 @@ btCopy.innerHTML="";
 
 function emoCopy() {
     outputEmo.select();
-    document.execCommand("copy");
+    navigator.clipboard.writeText(outputEmo.value);
 
     btCopy.innerHTML = "Tulisan disalin!"
     let timer = setTimeout(() => {
