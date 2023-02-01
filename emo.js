@@ -115,7 +115,7 @@ case "s": out=getEmoPart("===/=/===/  =/===", emo); break;
 case "t": out=getEmoPart("===/ =/ =/ =/ =", emo); break;
 case "u": out=getEmoPart("= =/= =/= =/= =/===", emo); break;
 case "v": out=getEmoPart("= =/= =/= =/= =/ =", emo); break;
-case "w": out=getEmoPart("= = =/= = = / = =", emo); break;
+case "w": out=getEmoPart("= = =/= = =/ = =", emo); break;
 case "x": out=getEmoPart("= =/= =/ =/= =/= =", emo); break;
 case "y": out=getEmoPart("= =/= =/===/ =/ =", emo); break;
 case "z": out=getEmoPart("===/  =/ =/=/===", emo); break;
