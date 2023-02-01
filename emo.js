@@ -3,20 +3,13 @@ const enter = "\n";
 const outputEmo = document.querySelector(".outputEmo");
 const btInput = document.querySelector(".btInput");
 const btCopy = document.querySelector(".copy");
-const txtCopy = "Salin tulisan";
 
 btInput.addEventListener("click", emobetPrompt);
 btCopy.addEventListener("click", emoCopy);
-btCopy.innerHTML="";
 
 function emoCopy() {
     outputEmo.select();
     navigator.clipboard.writeText(outputEmo.value);
-
-    btCopy.innerHTML = "Tulisan disalin!"
-    let timer = setTimeout(() => {
-        btCopy.innerHTML = txtCopy;
-    }, 1000);
 }
 
 function emobetPrompt () {
@@ -27,7 +20,6 @@ function emobetPrompt () {
         if (!emo) {throw "Masukkan minimal satu emoji"}
         
         let arrEmo = [];
-        btCopy.innerHTML = txtCopy;
 
         if (emo.search(",")>0) {
             let temp="";
