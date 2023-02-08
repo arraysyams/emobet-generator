@@ -13,27 +13,35 @@
     .copy {
         margin: 0;
     }
+    label {
+        margin-bottom: .5rem;
+    }
+    div.form-group {
+        margin-bottom: 1rem;
+    }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="form-group">
-        <label for="txtInput">Masukkan teks di sini:</label>
-        <input class="form-control" type="text" name="txtInput" id="txtInput">
-    </div>
-    <div class="form-group">
-        <label for="txtEmo">Masukkan emoji di sini:</label>
-        <input class="form-control" type="text" name="txtEmo" id="txtEmo">
-    </div>
-    <div class="form-group">
-        <button class="btInput btn btn-primary">Buat baru...</button>
-    </div>
-    <div class="form-group">
-        <p>Output:</p>
-        <div>
-            <button class="copy btn btn-dark">Salin tulisan</button>
+    
+        <div class="form-group">
+            <label for="txtInput">Masukkan teks</label>
+            <input class="form-control" type="text" name="txtInput" id="txtInput">
         </div>
-        <textarea name="txt" id="txt" cols="30" rows="15" class="outputEmo"></textarea>
+        <div class="form-group">
+            <label for="txtEmo">Masukkan emoji<br><span class="text-muted">(Pisahkan emoji dengan tanda koma. Contoh: 🚗,🚋)</span></label>
+            <input class="form-control" type="text" name="txtEmo" id="txtEmo">
+        </div>
+        <div class="form-group">
+            <button class="btInput btn btn-primary">Generate</button>
+        </div>
+        <div class="form-group">
+            <p>Output:</p>
+            <div>
+                <button class="copy btn btn-dark">Salin tulisan</button>
+            </div>
+            <textarea name="txt" id="txt" cols="30" rows="15" class="outputEmo"></textarea>
+    
     </div>
 </div>
     <script src="emo.js" type="text/javascript"></script>

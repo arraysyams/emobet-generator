@@ -1,5 +1,7 @@
 var empty = "      ";
 const enter = "\n";
+const txtInput = document.querySelector("#txtInput");
+const txtEmo = document.querySelector("#txtEmo");
 const outputEmo = document.querySelector(".outputEmo");
 const btInput = document.querySelector(".btInput");
 const btCopy = document.querySelector(".copy");
@@ -14,9 +16,9 @@ function emoCopy() {
 
 function emobetPrompt () {
     try {
-        let txt = prompt("Masukkan kalimat");
+        let txt = txtInput.value;
         if (!txt) {throw "Masukkan kalimatmu"}
-        let emo = prompt("Masukkan emoji.\nHint:\n1. Gunakan tanda koma untuk memasukkan 2 emoji atau lebih. Contoh: 🚗,🚋\n2. Tekan tombol [Windows] + [.] untuk memunculkan keyboard emoji di Windows");
+        let emo = txtEmo.value;
         if (!emo) {throw "Masukkan minimal satu emoji"}
         
         let arrEmo = [];
@@ -38,7 +40,7 @@ function emobetPrompt () {
             emobetGenerator(txt,emo);
         }
     } catch (error) {
-        console.log(error);
+        alert(error);
     }
 }
 
