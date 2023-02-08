@@ -140,7 +140,8 @@ function getEmobet(letter, emo) {
     let out;
 
     if (emoTemplate[letter] == undefined) {
-        console.log(letter + " tidak bisa diubah.")
+        console.log(letter + " tidak bisa diubah.");
+        out = "";
     } else {
         out = getEmoPart(emoTemplate[letter], emo);
     }
