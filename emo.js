@@ -80,7 +80,6 @@ var emoTemplate = {
     "z": "===/  =/ =/=/==="
 }
 
-
 btInput.addEventListener("click", executor);
 btCopy.addEventListener("click", copyText);
 txtInput.addEventListener("keypress", function (ev) {
@@ -109,6 +108,8 @@ function executor() {
         if (!txt) { txtInput.classList.add("is-invalid"); }
         if (!emo) { txtEmo.classList.add("is-invalid"); }
     } else { 
+        txtInput.classList.remove("is-invalid");
+        txtEmo.classList.remove("is-invalid");
         let arrEmo = [];
 
         if (emo.search(",") > 0) {
