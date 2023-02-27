@@ -80,8 +80,21 @@ var emoTemplate = {
     "z": "===/  =/ =/=/==="
 }
 
+
 btInput.addEventListener("click", executor);
 btCopy.addEventListener("click", copyText);
+txtInput.addEventListener("keypress", function (ev) {
+    txtInput.classList.remove("is-invalid");
+    if (ev.keyCode == 13) {
+        btInput.click();
+    }
+})
+txtEmo.addEventListener("keypress", function (ev) {
+    txtEmo.classList.remove("is-invalid");
+    if (ev.keyCode == 13) {
+        btInput.click();
+    }
+})
 
 function copyText() {
     outputEmo.select();
@@ -93,7 +106,8 @@ function executor() {
     let emo = txtEmo.value;
 
     if (!txt || !emo) {
-        alert("Isi kotak teks dan emoji")
+        if (!txt) { txtInput.classList.add("is-invalid"); }
+        if (!emo) { txtEmo.classList.add("is-invalid"); }
     } else { 
         let arrEmo = [];
 
